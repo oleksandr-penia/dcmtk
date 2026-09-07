@@ -259,7 +259,12 @@ void DcmPrivateOBTag::print(STD_NAMESPACE ostream& out, const size_t flags, cons
 void DcmPrivateOBTag::printValue(STD_NAMESPACE ostream& out, const size_t flags)
 {
     // Print bytes. First byte is separate to consistently print the '/' delimiter the following bytes. When printing, set formatting and upcast to short to print numerical value,
-    // rather than threating them as characters by default
+    // rather than treating them as characters by default
+    if (bytes.empty())
+    {
+        return;
+    }
+
     int i = 0, end = bytes.size();
     if (flags & DCMTypes::PF_shortenLongTagValues)
     {
