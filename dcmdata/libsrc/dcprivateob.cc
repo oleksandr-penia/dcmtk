@@ -340,11 +340,11 @@ int DcmPrivateOBTag::compareValues(DcmPrivateOBTag* myValue, DcmPrivateOBTag* rh
             uint8_t lByte = myValue->bytes[i], rByte = rhsValue->bytes[i];
             if (lByte < rByte)
             {
-                return 1;
+                return -1;
             }
             if (lByte > rByte)
             {
-                return -1;
+                return 1;
             }
         }
         return 0;
