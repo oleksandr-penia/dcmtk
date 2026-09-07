@@ -1,4 +1,6 @@
-#pragma once
+#ifndef DCPRIVATEOB_H
+#define DCPRIVATEOB_H
+
 #include "dcmtk/dcmdata/dcelem.h"
 #include "dcmtk/ofstd/oflist.h"
 #include <dcmtk/dcmdata/dcistrma.h>
@@ -34,3 +36,5 @@ private:
     int compareValues(DcmPrivateOBTag* lhs, DcmPrivateOBTag* rhs) const;
     void printValue(STD_NAMESPACE ostream& out, const size_t flags);
 };
+
+#endif //DCPRIVATEOB_H
