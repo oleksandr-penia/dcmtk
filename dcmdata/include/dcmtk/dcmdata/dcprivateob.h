@@ -1,8 +1,8 @@
 #pragma once
-#include "dcmtk\dcmdata\dcelem.h"
-#include "dcmtk\ofstd\oflist.h"
-#include <dcmtk\dcmdata\dcistrma.h>
-#include <dcmtk\dcmdata\dcostrma.h>
+#include "dcmtk/dcmdata/dcelem.h"
+#include "dcmtk/ofstd/oflist.h"
+#include <dcmtk/dcmdata/dcistrma.h>
+#include <dcmtk/dcmdata/dcostrma.h>
 
 /** Class DcmPrivateOBTag represents a private tag with OB value representation
 * and undefined length. While it is not supported by DICOM standard, there are
@@ -34,4 +34,3 @@ private:
     int compareValues(DcmPrivateOBTag* lhs, DcmPrivateOBTag* rhs) const;
     void printValue(STD_NAMESPACE ostream& out, const size_t flags);
 };
-
