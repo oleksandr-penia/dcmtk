@@ -302,9 +302,14 @@ void DcmPrivateOBTag::setupDelimiter(OFVector<uint8_t> delimiter)
 
 bool DcmPrivateOBTag::reachedEnd()
 {
+    if (bytes.size() < sequenceDelimiter.size())
+    {
+        return false;
+    }
+
     bool reached = true;
 
-    for (int i = bytes.size() - 8, j = 0; i < bytes.size(); i++, j++)
+    for (int i = bytes.size() - sequenceDelimiter.size(), j = 0; i < bytes.size(); i++, j++)
     {
         if (bytes[i] != sequenceDelimiter[j])
         {
