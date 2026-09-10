@@ -15,7 +15,7 @@ class DCMTK_DCMDATA_EXPORT DcmPrivateOBTag : public DcmElement
 public:
     DcmPrivateOBTag(DcmTag& tag);
 
-    OFCondition read(DcmInputStream& inStream, const E_TransferSyntax xfer, const E_GrpLenEncoding glenc, const Uint32 maxReadLength) override;
+    OFCondition read(DcmInputStream& inStream, const E_TransferSyntax xfer, const E_GrpLenEncoding glenc = EGL_noChange, const Uint32 maxReadLength = DCM_MaxReadLength) override;
     OFCondition write(DcmOutputStream& outStream, const E_TransferSyntax oxfer, const E_EncodingType enctype, DcmWriteCache* wcache) override;
 
     Uint32 getLength(const E_TransferSyntax xfer = EXS_LittleEndianImplicit, const E_EncodingType enctype = EET_UndefinedLength) override;
