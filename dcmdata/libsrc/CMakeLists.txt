@@ -25,6 +25,7 @@ DCMTK_ADD_LIBRARY(dcmdata
   dcistrma.cc
   dcistrmb.cc
   dcistrmf.cc
+  dcistrmh.cc
   dcistrms.cc
   dcistrmz.cc
   dcitem.cc
@@ -41,6 +42,7 @@ DCMTK_ADD_LIBRARY(dcmdata
   dcostrmz.cc
   dcpath.cc
   dcpcache.cc
+  dcprivateob.cc
   dcpixel.cc
   dcpixseq.cc
   dcpxitem.cc
